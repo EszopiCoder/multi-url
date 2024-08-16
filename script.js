@@ -14,9 +14,7 @@ let clinical = [
 function openMultiURL(links) {
   let urlLog = 'Log:';
   for (let i = 0; i < links.length; i++) {
-    let n = window.open('', '_blank');
-    n.document.write('Loading...');
-    n.location.href = links[i];
+    let n = window.open(links[i], '_blank');
     if (n != null) {
       urlLog += '<br>Open successfully: <a target="_blank" href="' + links[i] + '">' + links[i] +'</a>';
     } else {
